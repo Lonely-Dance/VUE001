@@ -1,0 +1,22 @@
+{
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": 2,
+          "helpers": true,
+          "regenerator": true,
+          "useESModules": false
+        }
+      ],"@babel/plugin-proposal-class-properties",
+      ["component", 
+        {
+          "libraryName": "mint-ui",
+          "style": true
+        }
+      ]
+  ]
+     
+   
+  }
