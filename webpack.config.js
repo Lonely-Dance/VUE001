@@ -36,17 +36,21 @@ module.exports = {
                 test: /\.scss$/,
                 use: ["style-loader", "css-loader", "sass-loader"]
             },
-            {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                use: 'url-loader'
-            },
-            {//处理导入min.css 后的报错
-                test:/.(png|gif|jpg|svg|ttf)$/,
-                use:[
-                    'file-loader'
-                ]
-            },
-            // { test: /\.(png|jpg|gif)$/, use: 'url-loader?limit=43960'}
+            
+            // {
+            //     test: /\.(png|jpg|gif|jpeg|svg|ttf)$/,
+            //     use: [{
+            //       loader: 'url-loader',
+            //       // loader: 'file-loader',
+            //       options: {
+            //         esModule: false, // 这里设置为false
+            //         name: '[name].[ext]',
+            //         limit: 10240
+            //       }
+            //     }]
+            //   },
+           
+            // { test: /\.(jpg|png|gif|bmp|jpeg|ttf)$/, use: 'url-loader?limit=10240&name=[name].[ext]'}, // 处理 图片路径的 loader,后面直接加 use: 'url-loader?limit=10240&name=[name].[ext]&esModule=false'会报错
             {
                 test: /\.js$/,
                 loader: "babel-loader",
