@@ -1,6 +1,6 @@
  import Vue from "vue"
  import App from "./App.vue"
- import { Header ,Swipe, SwipeItem} from 'mint-ui';
+ import { Header ,Swipe, SwipeItem,Button} from 'mint-ui';
  import 'mint-ui/lib/style.css'
  //mint-ui 按需导入得导入样式才能显示
  import "./lib/mui/css/mui.css"
@@ -17,13 +17,20 @@ Vue.use(VueRouter)
 import VueResource from 'vue-resource'
 // 2.2 安装 vue-resource
 Vue.use(VueResource)
-  
+// Vue.http.options.root="http://www.liulongbin.top:3005" 
+// 这么设置不能得到信息?
+ 
 
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 
 Vue.component(Header.name, Header);
+import moment from "moment"
+Vue.filter("dateFormat",function(datastr,pattern){
+  return moment(datastr).format(pattern);
+})
 
  var vm=new Vue({
      el:"#app",

@@ -10,6 +10,7 @@
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "mint-ui": "^2.2.13",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "url": "^0.11.0",

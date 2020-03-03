@@ -37,18 +37,18 @@ module.exports = {
                 use: ["style-loader", "css-loader", "sass-loader"]
             },
             
-            // {
-            //     test: /\.(png|jpg|gif|jpeg|svg|ttf)$/,
-            //     use: [{
-            //       loader: 'url-loader',
-            //       // loader: 'file-loader',
-            //       options: {
-            //         esModule: false, // 这里设置为false
-            //         name: '[name].[ext]',
-            //         limit: 10240
-            //       }
-            //     }]
-            //   },
+            {
+                test: /\.(png|jpg|gif|jpeg|svg|ttf)$/,
+                use: [{
+                  loader: 'url-loader',
+                  // loader: 'file-loader',
+                  options: {
+                    esModule: false, // 这里设置为false
+                    name: '[name].[ext]',
+                    limit: 10240
+                  }
+                }]
+              },
            
             // { test: /\.(jpg|png|gif|bmp|jpeg|ttf)$/, use: 'url-loader?limit=10240&name=[name].[ext]'}, // 处理 图片路径的 loader,后面直接加 use: 'url-loader?limit=10240&name=[name].[ext]&esModule=false'会报错
             {
