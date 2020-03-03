@@ -16,7 +16,9 @@
           "style": true
         }
       ]
-  ]
+      // "transform-remove-strict-mode"//导入mui.js时候使用的去除严格模式
+  ],
+  "ignore": [ "./src/lib/mui/js/*.js" ]
      
    
   }

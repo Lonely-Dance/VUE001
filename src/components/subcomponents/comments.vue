@@ -6,23 +6,14 @@
       
         <mt-button size="large" class="btn" @click="postComments">发表评论</mt-button>
         <!-- 评论内容 -->
-        <!-- <div class="cmt-list">
-            <div class="cmt-item" v-for="(item,i) in comments" :key="item.add_time"> 
-                <div class="cmt-title">
-                    第{{i+1}}楼&nbsp;&nbsp; 用户： {{item.user_name}} 发表时间：{{item.add_time|dateFormat}}
-                </div>
-                <div class="cmt-content">
-                       {{item.content==='undefined' ? '此用户没有发表任何评论':item.content}}
-                </div>
-            </div>
-        </div> -->
+        
         <div class="cmt-list">
       <div class="cmt-item" v-for="(item, i) in comments" :key="item.add_time">
         <div class="cmt-title">
           第{{ i+1 }}楼&nbsp;&nbsp;用户：{{ item.user_name }}&nbsp;&nbsp;发表时间：{{ item.add_time | dateFormat("YYYY-MM-DD HH:mm:ss")}}
         </div>
         <div class="cmt-body">
-          {{ item.content === 'undefined' ? '此用户很懒，嘛都没说': item.content }}
+          {{ item.content === 'undefined' ? '此用户没有发表任何评论此用户很懒，嘛都没说': item.content }}
         </div>
       </div>
 
